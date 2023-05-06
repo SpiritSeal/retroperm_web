@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Retroperm Online Demo Interface</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/mainpage.css') }}">
+</head>
+<body>
+<h1>Retroperm Online Demo Interface</h1>
+<form action="/" method="post" enctype="multipart/form-data">
+    <h2>Choose a file to analyze.</h2>
+    <input type="file" name="file">
+    <br>
+    <h2>Choose the rules you would like to use.</h2>
+    <label>
+        <input type="checkbox" name="option1" value="true" checked>
+        Detect Filesystem Operations as a Category
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" name="option2" value="true" checked>
+        Detect Network Operations as a Category
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" name="option3" value="true" checked>
+        Detect Filesystem Operations in the directory /tmp/
+    </label>
+    <br>
+    <label>
+        <input type="checkbox" name="option4" value="true" checked>
+        Detect Accesses and Modifications of the file /etc/passwd
+    </label>
+    <br>
+    <input type="submit" value="Upload">
+</form>
+</body>
+</html>
